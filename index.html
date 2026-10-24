@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhoneStore - Cửa hàng điện thoại di động (bản học tập)</title>
+  <meta name="description" content="Website bán điện thoại di động xây dựng bằng HTML, CSS và JavaScript thuần - Giai đoạn 1: giao diện cơ bản.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#san-pham">Bỏ qua đến danh sách sản phẩm</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">PhoneStore</a>
+      <form class="search" role="search" data-pending="Tìm kiếm (Giai đoạn 2)">
+        <label for="q" class="sr-only">Tìm điện thoại</label>
+        <input id="q" type="search" placeholder="Tìm điện thoại theo tên">
+        <button type="submit" class="btn btn-solid">Tìm</button>
+      </form>
+      <button type="button" class="cart" aria-label="Giỏ hàng, 0 sản phẩm" data-pending="Giỏ hàng (Giai đoạn 4)">
+        <img src="assets/icons/cart.svg" alt="" width="22" height="22">
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+    <nav class="container nav" aria-label="Điều hướng chính">
+      <a href="#trang-chu" aria-current="page">Trang chủ</a>
+      <a href="#thuong-hieu">Thương hiệu</a>
+      <a href="#san-pham">Sản phẩm</a>
+      <a href="#uu-dai">Ưu đãi</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main id="trang-chu">
+    <section class="hero">
+      <div class="container hero-row">
+        <div class="hero-text">
+          <h1>Chọn điện thoại phù hợp, rõ giá, dễ so sánh</h1>
+          <p>Bộ sưu tập điện thoại từ Apple, Samsung, Xiaomi và OPPO. Đây là bản minh họa phục vụ học lập trình.</p>
+          <a class="btn btn-accent" href="#san-pham">Xem sản phẩm</a>
+        </div>
+        <img class="hero-img" src="assets/images/hero.svg" alt="Hình minh họa hai điện thoại" width="400" height="320">
+      </div>
+    </section>
+
+    <section class="container section" id="thuong-hieu" aria-labelledby="h-brand">
+      <h2 id="h-brand">Thương hiệu</h2>
+      <ul class="brands">
+        <li><button type="button" class="brand" data-pending="Lọc theo thương hiệu (Giai đoạn 2)">Apple</button></li>
+        <li><button type="button" class="brand" data-pending="Lọc theo thương hiệu (Giai đoạn 2)">Samsung</button></li>
+        <li><button type="button" class="brand" data-pending="Lọc theo thương hiệu (Giai đoạn 2)">Xiaomi</button></li>
+        <li><button type="button" class="brand" data-pending="Lọc theo thương hiệu (Giai đoạn 2)">OPPO</button></li>
+      </ul>
+    </section>
+
+    <section class="container section" id="san-pham" aria-labelledby="h-prod">
+      <h2 id="h-prod">Điện thoại nổi bật</h2>
+      <p class="note">Giá và sản phẩm chỉ là dữ liệu minh họa.</p>
+      <div class="grid">
+        <article class="card" data-id="SP001" data-brand="Apple" data-price="19990000">
+          <img src="assets/images/phone-1.svg" alt="iPhone 15 128GB" width="240" height="300" loading="lazy">
+          <p class="card-brand">Apple</p>
+          <h3>iPhone 15 128GB</h3>
+          <p class="price">19.990.000 ₫</p>
+          <div class="card-actions">
+            <button type="button" class="btn btn-ghost" data-pending="Xem chi tiết (Giai đoạn 3)">Xem chi tiết</button>
+            <button type="button" class="btn btn-solid" data-pending="Giỏ hàng (Giai đoạn 4)">Thêm vào giỏ</button>
+          </div>
+        </article>
+        <article class="card" data-id="SP002" data-brand="Apple" data-price="29990000">
+          <img src="assets/images/phone-2.svg" alt="iPhone 15 Pro Max 256GB" width="240" height="300" loading="lazy">
+          <p class="card-brand">Apple</p>
+          <h3>iPhone 15 Pro Max 256GB</h3>
+          <p class="price">29.990.000 ₫</p>
+          <div class="card-actions">
+            <button type="button" class="btn btn-ghost" data-pending="Xem chi tiết (Giai đoạn 3)">Xem chi tiết</button>
+            <button type="button" class="btn btn-solid" data-pending="Giỏ hàng (Giai đoạn 4)">Thêm vào giỏ</button>
+          </div>
+        </article>
+        <article class="card" data-id="SP003" data-brand="Samsung" data-price="18990000">
+          <img src="assets/images/phone-3.svg" alt="Samsung Galaxy S24 256GB" width="240" height="300" loading="lazy">
+          <p class="card-brand">Samsung</p>
+          <h3>Samsung Galaxy S24 256GB</h3>
+          <p class="price">18.990.000 ₫</p>
+          <div class="card-actions">
+            <button type="button" class="btn btn-ghost" data-pending="Xem chi tiết (Giai đoạn 3)">Xem chi tiết</button>
+            <button type="button" class="btn btn-solid" data-pending="Giỏ hàng (Giai đoạn 4)">Thêm vào giỏ</button>
+          </div>
+        </article>
+        <article class="card" data-id="SP004" data-brand="Samsung" data-price="9990000">
+          <img src="assets/images/phone-4.svg" alt="Samsung Galaxy A55 5G" width="240" height="300" loading="lazy">
+          <p class="card-brand">Samsung</p>
+          <h3>Samsung Galaxy A55 5G</h3>
+          <p class="price">9.990.000 ₫</p>
+          <div class="card-actions">
+            <button type="button" class="btn btn-ghost" data-pending="Xem chi tiết (Giai đoạn 3)">Xem chi tiết</button>
+            <button type="button" class="btn btn-solid" data-pending="Giỏ hàng (Giai đoạn 4)">Thêm vào giỏ</button>
+          </div>
+        </article>
+        <article class="card" data-id="SP005" data-brand="Xiaomi" data-price="17490000">
+          <img src="assets/images/phone-5.svg" alt="Xiaomi 14 256GB" width="240" height="300" loading="lazy">
+          <p class="card-brand">Xiaomi</p>
+          <h3>Xiaomi 14 256GB</h3>
+          <p class="price">17.490.000 ₫</p>
+          <div class="card-actions">
+            <button type="button" class="btn btn-ghost" data-pending="Xem chi tiết (Giai đoạn 3)">Xem chi tiết</button>
+            <button type="button" class="btn btn-solid" data-pending="Giỏ hàng (Giai đoạn 4)">Thêm vào giỏ</button>
+          </div>
+        </article>
+        <article class="card" data-id="SP006" data-brand="Xiaomi" data-price="5990000">
+          <img src="assets/images/phone-6.svg" alt="Redmi Note 13 Pro" width="240" height="300" loading="lazy">
+          <p class="card-brand">Xiaomi</p>
+          <h3>Redmi Note 13 Pro</h3>
+          <p class="price">5.990.000 ₫</p>
+          <div class="card-actions">
+            <button type="button" class="btn btn-ghost" data-pending="Xem chi tiết (Giai đoạn 3)">Xem chi tiết</button>
+            <button type="button" class="btn btn-solid" data-pending="Giỏ hàng (Giai đoạn 4)">Thêm vào giỏ</button>
+          </div>
+        </article>
+        <article class="card" data-id="SP007" data-brand="OPPO" data-price="10490000">
+          <img src="assets/images/phone-7.svg" alt="OPPO Reno11 5G" width="240" height="300" loading="lazy">
+          <p class="card-brand">OPPO</p>
+          <h3>OPPO Reno11 5G</h3>
+          <p class="price">10.490.000 ₫</p>
+          <div class="card-actions">
+            <button type="button" class="btn btn-ghost" data-pending="Xem chi tiết (Giai đoạn 3)">Xem chi tiết</button>
+            <button type="button" class="btn btn-solid" data-pending="Giỏ hàng (Giai đoạn 4)">Thêm vào giỏ</button>
+          </div>
+        </article>
+        <article class="card" data-id="SP008" data-brand="OPPO" data-price="5790000">
+          <img src="assets/images/phone-8.svg" alt="OPPO A78" width="240" height="300" loading="lazy">
+          <p class="card-brand">OPPO</p>
+          <h3>OPPO A78</h3>
+          <p class="price">5.790.000 ₫</p>
+          <div class="card-actions">
+            <button type="button" class="btn btn-ghost" data-pending="Xem chi tiết (Giai đoạn 3)">Xem chi tiết</button>
+            <button type="button" class="btn btn-solid" data-pending="Giỏ hàng (Giai đoạn 4)">Thêm vào giỏ</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" id="uu-dai" aria-labelledby="h-deal">
+      <div class="deal">
+        <h2 id="h-deal">Khu vực ưu đãi</h2>
+        <p>[Nội dung ưu đãi sẽ được thay thế khi có chương trình thật]</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="lien-he">
+    <div class="container footer-row">
+      <div>
+        <h2>PhoneStore</h2>
+        <p>Dự án học tập, không phải cửa hàng thật.</p>
+      </div>
+      <div>
+        <h2>Chính sách (minh họa)</h2>
+        <p>[Chính sách đổi trả - thay thế khi có]</p>
+        <p>[Chính sách bảo hành - thay thế khi có]</p>
+      </div>
+      <div>
+        <h2>Liên hệ (placeholder)</h2>
+        <p>Địa chỉ: [chưa cung cấp]</p>
+        <p>Điện thoại: [chưa cung cấp]</p>
+        <p>Email: [chưa cung cấp]</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
